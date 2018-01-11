@@ -36,7 +36,7 @@ public class PointsFileReader {
         points = new Point[strPoints.size()];
         for (int i = 0; i < strPoints.size(); i++) {
             String[] coordinates = strPoints.get(i).split(",");
-            int x = Integer.parseInt(coordinates[0]), y = Integer.parseInt(coordinates[1]);
+            double x = Double.parseDouble(coordinates[0]), y = Double.parseDouble(coordinates[1]);
             points[i] = new Point(x, y);
         }
         reader.close();

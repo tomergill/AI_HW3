@@ -84,7 +84,7 @@ public class java_ex3 {
                 index = orderedClusters.size();
                 orderedClusters.add(cluster);
             }
-            clusterNumOfPoint[i] = index;
+            clusterNumOfPoint[i] = index + 1;
         }
 
         /* For debugging purposes - prints the clusters we got at the end */
@@ -96,7 +96,7 @@ public class java_ex3 {
             for (int i = 0; i < clusterNumOfPoint.length - 1; i++) {
                 writer.write(clusterNumOfPoint[i] + "\n");
             }
-            writer.write(clusterNumOfPoint[clusterNumOfPoint.length - 1]);
+            writer.write(Integer.toString(clusterNumOfPoint[clusterNumOfPoint.length - 1]));
             writer.close();
         } catch (IOException e) {
             System.out.println("Error writing to output file " + output_file_path + ":");

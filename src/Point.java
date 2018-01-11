@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 /**
  * Immutable Point class, has x and y values.
  */
@@ -6,7 +8,7 @@ public class Point {
     /**
      * x and y values.
      */
-    private int x, y;
+    private double x, y;
 
     /**
      * Constructor.
@@ -14,7 +16,7 @@ public class Point {
      * @param x x-value of point.
      * @param y y-value of point.
      */
-    public Point(int x, int y) {
+    public Point(double x, double y) {
         this.x = x;
         this.y = y;
     }
@@ -24,7 +26,7 @@ public class Point {
      *
      * @return the x value of the point.
      */
-    public int getX() {
+    public double getX() {
         return x;
     }
 
@@ -33,7 +35,7 @@ public class Point {
      *
      * @return the y value of the point.
      */
-    public int getY() {
+    public double getY() {
         return y;
     }
 
@@ -58,9 +60,8 @@ public class Point {
      */
     @Override
     public int hashCode() {
-        int result = x;
-        result = 31 * result + y;
-        return result;
+
+        return Objects.hash(x, y);
     }
 
     /**
