@@ -17,10 +17,11 @@ public class PointsFileReader {
     /**
      * Reads the file and keeps the data in members.
      * Use getDistance_method(), getClusters_num() and getPoints() to access them.
+     *
      * @param path Path to input file.
      * @throws IOException If reading the file goes wrong.
      */
-    public PointsFileReader(String path) throws IOException{
+    public PointsFileReader(String path) throws IOException {
         distance_method = null;
         clusters_num = -1;
         points = null;
@@ -38,10 +39,12 @@ public class PointsFileReader {
             int x = Integer.parseInt(coordinates[0]), y = Integer.parseInt(coordinates[1]);
             points[i] = new Point(x, y);
         }
+        reader.close();
     }
 
     /**
      * The method to calculate the distance between clusters.
+     *
      * @return A String representation of it from the file.
      */
     public String getDistance_method() {

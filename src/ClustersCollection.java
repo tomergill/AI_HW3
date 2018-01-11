@@ -6,11 +6,13 @@ import java.util.List;
 /**
  * Class for a collection of clusters.
  * It knows how to merge 2 clusters in the Hierarchical Clustering way.
+ *
  * @param <T> Type of elements in the clusters.
  */
 public class ClustersCollection<T> {
     /**
      * Generic interface holding a function that calculates the distance between 2 elements.
+     *
      * @param <T> Type of elements
      */
     public interface ElementsRealDistanceCalculator<T> {
@@ -19,6 +21,7 @@ public class ClustersCollection<T> {
 
     /**
      * Generic interface holding a function that calculates the distance between 2 clusters.
+     *
      * @param <T> Type of the elements in the clusters
      */
     public interface ClustersRealDistanceCalculator<T> {
@@ -31,9 +34,10 @@ public class ClustersCollection<T> {
 
     /**
      * Ctor.
-     * @param initial_elements Creates a different cluster from each element in this.
-     * @param eleCalc Function to calculate distance between 2 elements from clusters
-     * @param clusCalc Function to calculate distance between 2 clusters
+     *
+     * @param initial_elements Creates a new cluster from each element in this.
+     * @param eleCalc          Function to calculate distance between 2 elements from clusters
+     * @param clusCalc         Function to calculate distance between 2 clusters
      */
     public ClustersCollection(Collection<T> initial_elements, ElementsRealDistanceCalculator<T> eleCalc,
                               ClustersRealDistanceCalculator<T> clusCalc) {
